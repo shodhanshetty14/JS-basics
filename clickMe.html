@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Me </title>
+    <style>
+        #heading{
+            text-align: center;
+            color: blue;
+            position: absolute;
+            transition: .5s;
+            width:fit-content
+        }
+        #but{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <h2 id="heading" >Catch me if you can!!</h2>
+    <button id="but">Click ME!!</button>
+</body>
+<script>
+    let constantButton = 0;
+    let constantHeading = 0;
+    console.log("You Wont be getting any Hint Here LOL");
+    function clickFunc(){
+        alert("No Cheating use your Mouse!!")
+    }
+
+    var heading = document.getElementById("heading");
+    heading.onmouseover = function(){
+        heading.style.left =  `${Math.ceil(Math.random() * 90)}%`
+        heading.style.top =  `${Math.ceil(Math.random() * 90)}%`
+        constantHeading++;
+        if(constantHeading >= 10){
+            alert("Come on you tried like more than 10 time dude Still you are unable to catch me!!")
+            document.write("You are a looser!!")
+        }
+    }
+
+    var buttonHover = document.getElementById("but");
+    buttonHover.onmouseover = function(){
+        buttonHover.style.left =  `${Math.ceil(Math.random() * 90)}%`
+        buttonHover.style.top =  `${Math.ceil(Math.random() * 90)}%`
+        constantButton++;
+        if(constantButton >= 10){
+            alert("Come on you tried like more than 10 time dude Still you are unable to catch me!!")
+            document.write("You are a looser!!")
+        }
+    }
+</script>
+</html>

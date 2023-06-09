@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading{
+            text-align: center;
+            color: blue;
+        }
+        #inputForm{
+            text-align: center;
+            border: 2px solid black;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="heading">Guess the number</h2>
+    <form id="inputForm">
+        <label for="number">Enter your guess</label>
+        <input type="number" id="number1" placeholder="Enter a number">
+        <br>
+        <br>
+        <input type="submit" onclick="randomGenerator()" value="Submit">
+        <script>
+            function randomGenerator(){
+                var randomNumber = Math.floor(Math.random() * 10);
+                var inputNumber = document.getElementById("number1").value;
+                if(inputNumber < 0 || inputNumber > 10){
+                    alert("Please enter a number between 0 and 10");
+                    return;
+                }
+                if(randomNumber == inputNumber){
+                    alert("You guessed it right");
+                }
+                else{
+                    alert("You guessed it wrong. My guess was " + randomNumber + ".");
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>
