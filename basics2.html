@@ -7,7 +7,9 @@
 </head>
 <body>
     <h1>Functions, Objects, Variables...</h1>
+    <h1 id="clicker">Click Me!!</h1>
     <script>
+        "use strict";
         //var a = 10;
         //var a = 20;
          //const a = 10;
@@ -37,6 +39,12 @@
         var arr = [10, 20, 30, 40, 50];
         arr.forEach((item)=>{
             console.log(item);
+        })
+
+        let h1Click = document.getElementById("clicker");
+        h1Click.addEventListener("click", ()=>{
+            console.log("Clicked");
+            alert("Clicked")
         })
 
     </script>
