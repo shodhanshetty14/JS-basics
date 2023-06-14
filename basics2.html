@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions, Objects, Variables...</h1>
+    <script>
+        //var a = 10;
+        //var a = 20;
+         //const a = 10;
+         //a += 20;
+        let a = 10;
+        //let a = 20;   This will cause error as a is already defined 
+        console.log(a);
+
+        function Hello(){
+            console.log("Hello World");
+            let x = 1;
+            return x;
+        }
+        
+        let x = Hello();
+        console.log(x);
+
+        let obj = new Object();
+        obj.name = "Rahul";
+        obj.age = 20;
+        obj.greet = function(){
+            console.log("Hello " + this.name);
+        }
+        console.log(obj);
+        obj.greet();
+
+        
+
+    </script>
+</body>
+</html>
